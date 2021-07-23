@@ -31,3 +31,7 @@ const result = await verify.verifiy(encodedReceipt);
 //result encoded like the Apple Doc : https://developer.apple.com/documentation/appstorereceipts/responsebody
 //or throws error if no Http 200 status code is returnd
 ```
+
+## Changelog
+
+0.1.1 : Change input receipt to require base64 encoded string

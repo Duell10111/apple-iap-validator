@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export class Verifier {
 
-    options : Options
+    private options : Options
 
     constructor(options : Options) {
         this.options = options
@@ -11,15 +11,14 @@ export class Verifier {
 
     /**
      * Verify Receipt throw Apple's web interface
-     * @param receipt Receipt to verify
+     * @param receipt Receipt to verify encoded as base64 string
      * @returns ValidResponse object
      * @throws Error if no valid response received
      */
     async verifiy(receipt : string) {
-        const receiptEncoded = Buffer.from(receipt).toString('base64')
 
         const data = {
-            ["receipt-data"]: receiptEncoded,
+            ["receipt-data"]: receipt,
             password: this.options.appShared,
         }
         
@@ -40,7 +39,6 @@ export class Verifier {
         const result = await axios.post(useSandboxURL ? sandboxURL : productURL, data)
         if(result.status == 200) {
             const data : VerifyResult = result.data
-            console.log(data)
             if(data.status == 0){
                 return {data : data}
             } else if(data.status == 21007) { //Use Sandbox URL
