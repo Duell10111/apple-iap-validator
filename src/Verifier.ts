@@ -23,7 +23,7 @@ export class Verifier {
         }
         
         let result = await this.verifyReceipt(data)
-        if(!result.useSandboxURL) {
+        if(result.useSandboxURL) {
             result = await this.verifyReceipt(data, true)
         }
         if(result.data) {
