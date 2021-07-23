@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -39,7 +39,7 @@
     "url": "git+https://github.com/Duell10111/apple-iap-validator"
   },
   "bugs": {
-        "url": "https://github.com/Duell10111/apple-iap-validator/issues"
+    "url": "https://github.com/Duell10111/apple-iap-validator/issues"
   },
   "homepage": "https://github.com/Duell10111/apple-iap-validator#readme",
   "size-limit": [
@@ -63,6 +63,12 @@
   "dependencies": {
     "axios": "^0.21.1"
   },
-  "jest": { "testEnvironment": "node" },
-  "licenses": [{"type": "MIT"}]
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
 }
