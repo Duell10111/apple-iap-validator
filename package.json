@@ -34,6 +34,14 @@
   "name": "apple-iap-validator",
   "author": "Konstantin Späth",
   "module": "dist/apple-iap-validator.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Duell10111/apple-iap-validator"
+  },
+  "bugs": {
+        "url": "https://github.com/Duell10111/apple-iap-validator/issues"
+  },
+  "homepage": "https://github.com/Duell10111/apple-iap-validator#readme",
   "size-limit": [
     {
       "path": "dist/apple-iap-validator.cjs.production.min.js",
